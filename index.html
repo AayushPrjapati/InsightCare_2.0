@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightCare | AI-Powered Healthcare</title>
+
+    <!-- Scripts & Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS & JS files -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body
+    class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> InsightCare
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#cta" class="btn btn-primary nav-cta hover-glow">Get Started</a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section-padding">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text scroll-reveal">
+                <div class="badge">Next-gen Healthcare Tech</div>
+                <h1>Smarter Healthcare with <span class="highlight">AI-Powered Insights</span></h1>
+                <p>InsightCare is a smart healthcare platform combining AI-powered diagnosis, lifestyle tools, and 24x7
+                    consultation services.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary hover-glow">Start Diagnosis</a>
+                    <a href="#bot" class="btn btn-outline hover-glow">
+                        <i class="fa-solid fa-robot"></i> Talk to Fitzy
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image scroll-reveal w-full flex justify-center lg:justify-end">
+                <div
+                    class="grid grid-cols-12 gap-4 p-6 bg-slate-50 rounded-3xl border border-slate-200 shadow-2xl max-w-5xl mx-auto w-full">
+
+                    <div
+                        class="col-span-12 md:col-span-8 bg-white p-6 rounded-2xl border border-emerald-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <span
+                                class="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-bold rounded-full uppercase tracking-wider">AI
+                                Analysis Live</span>
+                            <h3 class="text-2xl font-bold mt-2">Overall Health: <span
+                                    class="text-emerald-500">Excellent</span></h3>
+                            <p class="text-slate-500 mt-2">Your biometric data shows 12% improvement in respiratory
+                                efficiency compared to last week.</p>
+                        </div>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <button
+                                class="px-4 py-2 bg-emerald-500 text-white rounded-xl font-medium hover:bg-emerald-600 transition-colors">View
+                                Deep Insights</button>
+                            <button
+                                class="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl font-medium hover:bg-slate-200 transition-colors">Download
+                                PDF</button>
+                        </div>
+                    </div>
+
+                    <div class="col-span-12 md:col-span-4 flex flex-col gap-4">
+                        <div class="bg-red-50 p-5 rounded-2xl border border-red-100 flex items-center justify-between">
+                            <div>
+                                <p class="text-red-400 text-sm font-medium">Heart Rate</p>
+                                <p class="text-2xl font-bold text-red-600">72 <span
+                                        class="text-sm font-normal">bpm</span></p>
+                            </div>
+                            <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                <i class="fa-solid fa-heart-pulse text-red-500"></i>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-blue-50 p-5 rounded-2xl border border-blue-100 flex items-center justify-between">
+                            <div>
+                                <p class="text-blue-400 text-sm font-medium">SPO2</p>
+                                <p class="text-2xl font-bold text-blue-600">98 <span
+                                        class="text-sm font-normal">%</span></p>
+                            </div>
+                            <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                                <i class="fa-solid fa-wind text-blue-500"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="col-span-12 bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 overflow-hidden relative">
+                        <div class="relative z-10">
+                            <p class="text-slate-400 text-sm">Next Consultation</p>
+                            <h4 class="text-lg font-semibold">Dr. Aayush Prajapati — Neurology</h4>
+                            <p class="text-emerald-400 text-sm mt-1">Starting in 14 minutes</p>
+                        </div>
+                        <button
+                            class="relative z-10 px-6 py-2 bg-white text-slate-900 rounded-full font-bold hover:bg-emerald-400 hover:text-white transition-all whitespace-nowrap">
+                            Join Room
+                        </button>
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 bg-emerald-500/20 blur-3xl rounded-full pointer-events-none">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features Block -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Platform Features</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Everything You Need for Better Health
+                </h3>
+                <p class="text-slate-600 text-lg">Discover our comprehensive suite of intelligent healthcare tools.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-brand-50 flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-brain text-2xl text-brand-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">AI-Based Diagnosis</h4>
+                    <p class="text-slate-600 leading-relaxed">Predict early signs of Cancer, Diabetes, and Parkinson’s
+                        using advanced AI-powered report analysis.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:bg-blue-500 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-stethoscope text-2xl text-blue-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">MidiTools</h4>
+                    <p class="text-slate-600 leading-relaxed">Health utilities including BMI calculator, Blood Pressure
+                        monitor, Sugar level tracker, and Cholesterol check.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 group-hover:bg-purple-500 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-robot text-2xl text-purple-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Fitzy – AI Chatbot</h4>
+                    <p class="text-slate-600 leading-relaxed">A friendly conversational AI that answers health questions
+                        and gives lifestyle guidance instantly.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 group-hover:bg-rose-500 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-user-doctor text-2xl text-rose-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">24x7 Consultation</h4>
+                    <p class="text-slate-600 leading-relaxed">Connect with verified healthcare professionals anytime
+                        from anywhere for peace of mind.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center mb-6 group-hover:bg-amber-500 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-music text-2xl text-amber-500 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Mood-Based Music</h4>
+                    <p class="text-slate-600 leading-relaxed">AI-powered playlists designed specifically to improve
+                        mood, reduce stress, and support mental wellness.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-8 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(16,185,129,0.1)] hover:-translate-y-2 transition-all duration-300 group">
+                    <div
+                        class="w-14 h-14 rounded-2xl bg-slate-100 flex items-center justify-center mb-6 group-hover:bg-slate-700 transition-colors duration-300">
+                        <i
+                            class="fa-solid fa-shield-halved text-2xl text-slate-600 group-hover:text-white transition-colors duration-300"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Secure & Private</h4>
+                    <p class="text-slate-600 leading-relaxed">Your data is yours. All health data is processed locally
+                        or heavily encrypted to ensure total privacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Platform -->
+    <section id="about" class="py-24 bg-brand-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-reveal">
+            <div
+                class="bg-white rounded-[2.5rem] p-8 md:p-16 shadow-xl shadow-brand-900/5 flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1">
+                    <div class="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-leaf text-3xl text-brand-600"></i>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Next-Generation Healthcare, Built for
+                        You</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        InsightCare is a pioneering healthcare platform combining the power of artificial intelligence,
+                        preventive care, and intuitive digital health tools.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Our mission is to make high-quality healthcare accessible, intelligent, and proactive. From
+                        early diagnosis to everyday lifestyle management, we put the power of modern medicine directly
+                        into your hands.
+                    </p>
+                </div>
+                <div class="flex-1 grid grid-cols-2 gap-4 w-full">
+                    <div class="bg-brand-50 rounded-3xl p-6 text-center hover:bg-brand-100 transition-colors">
+                        <div class="text-4xl font-bold text-brand-600 mb-2">99%</div>
+                        <div class="text-slate-600 font-medium">AI Accuracy</div>
+                    </div>
+                    <div class="bg-blue-50 rounded-3xl p-6 text-center mt-8 hover:bg-blue-100 transition-colors">
+                        <div class="text-4xl font-bold text-blue-600 mb-2">24/7</div>
+                        <div class="text-slate-600 font-medium">Doctor Support</div>
+                    </div>
+                    <div class="bg-purple-50 rounded-3xl p-6 text-center -mt-8 hover:bg-purple-100 transition-colors">
+                        <div class="text-4xl font-bold text-purple-600 mb-2">50k+</div>
+                        <div class="text-slate-600 font-medium">Active Users</div>
+                    </div>
+                    <div class="bg-rose-50 rounded-3xl p-6 text-center hover:bg-rose-100 transition-colors">
+                        <div class="text-4xl font-bold text-rose-600 mb-2">100%</div>
+                        <div class="text-slate-600 font-medium">Data Secure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How InsightCare Works -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Process</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">How InsightCare Works</h3>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 relative scroll-reveal">
+                <div
+                    class="hidden md:block absolute top-1/2 left-20 right-20 h-0.5 bg-gradient-to-r from-brand-100 via-brand-300 to-brand-100 -z-10 -translate-y-1/2">
+                </div>
+
+                <div
+                    class="bg-white border-2 border-brand-50 w-full md:w-1/3 rounded-3xl p-8 text-center relative z-10 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+                    <div
+                        class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-brand-500/40">
+                        1</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Upload Data</h4>
+                    <p class="text-slate-600 text-sm">Upload your health data, symptoms, or medical reports securely.
+                    </p>
+                </div>
+                <div class="bg-white border-2 border-brand-50 w-full md:w-1/3 rounded-3xl p-8 text-center relative z-10 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-brand-500/40">
+                        2</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">AI Analyzes</h4>
+                    <p class="text-slate-600 text-sm">Our advanced AI analyzes patterns to predict risks and evaluate
+                        vitals.</p>
+                </div>
+                <div class="bg-white border-2 border-brand-50 w-full md:w-1/3 rounded-3xl p-8 text-center relative z-10 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-16 h-16 bg-brand-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg shadow-brand-500/40">
+                        3</div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Get Insights</h4>
+                    <p class="text-slate-600 text-sm">Receive immediate insights, digital tools, or instant doctor
+                        consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Our Premium Services -->
+    <section id="premium" class="py-24 bg-slate-50 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 scroll-reveal">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Upgrade Your Health</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Premium Services</h3>
+                <p class="text-slate-600 text-lg">Elevate your wellness with personalized, priority access to top-tier
+                    health features.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 scroll-reveal">
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-sm flex items-start gap-6 border border-brand-100 hover:shadow-xl hover:shadow-brand-500/10 hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-600 flex items-center justify-center flex-shrink-0 text-white text-2xl shadow-lg shadow-brand-500/30">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Priority Consultation</h4>
+                        <p class="text-slate-600">Skip the queue. Get direct, priority access to specialists and
+                            practitioners within minutes.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-sm flex items-start gap-6 border border-brand-100 hover:shadow-xl hover:shadow-brand-500/10 hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center flex-shrink-0 text-white text-2xl shadow-lg shadow-indigo-500/30">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Advanced AI Reports</h4>
+                        <p class="text-slate-600">Uncover detailed micro-trends in your lab results with our deepest
+                            tier of predictive health analysis.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-sm flex items-start gap-6 border border-brand-100 hover:shadow-xl hover:shadow-brand-500/10 hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center flex-shrink-0 text-white text-2xl shadow-lg shadow-orange-500/30">
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Personalized Wellness</h4>
+                        <p class="text-slate-600">Tailored nutrition, fitness, and lifestyle blueprints dynamically
+                            crafted specially for your body profile.</p>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white rounded-3xl p-8 shadow-sm flex items-start gap-6 border border-brand-100 hover:shadow-xl hover:shadow-brand-500/10 hover:-translate-y-2 transition-all duration-300">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-fuchsia-600 flex items-center justify-center flex-shrink-0 text-white text-2xl shadow-lg shadow-purple-500/30">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Continuous Monitoring</h4>
+                        <p class="text-slate-600">Connect with wearables to provide real-time feedback loops and
+                            intelligent alerts for peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODERN CTA SECTION -->
+    <section id="cta" class="py-32 relative overflow-hidden bg-white">
+        <!-- Abstract Top Left -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-brand-50 rounded-full blur-[100px] opacity-70">
+            </div>
+            <div
+                class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-[120px] opacity-60 translate-x-1/2 -translate-y-1/2">
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center scroll-reveal">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full text-brand-600 text-sm font-semibold mb-8 shadow-sm">
+                <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span> Available 24/7
+            </div>
+
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-8 tracking-tight leading-tight">
+                Ready to rethink how you <br class="hidden md:block" />manage your health?
+            </h2>
+
+            <p class="text-slate-600 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                Join our growing community and experience the future of personalized healthcare. No waitlists, just
+                instant insights.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <button
+                    class="w-full sm:w-auto bg-slate-900 text-white hover:bg-brand-600 px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-xl shadow-slate-900/10 hover:shadow-brand-500/25 hover:-translate-y-1 text-lg">
+                    Get Started Free
+                </button>
+                <button
+                    class="w-full sm:w-auto bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-8 py-4 rounded-xl font-medium transition-all duration-300 shadow-sm text-lg flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-calendar-check text-brand-500"></i> Book Demo
+                </button>
+            </div>
+            <p class="text-xs text-slate-400 mt-6 font-medium tracking-wide">NO CREDIT CARD REQUIRED • CANCEL ANYTIME
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16 border-t-4 border-brand-500 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12 scroll-reveal">
+
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-notes-medical text-sm"></i>
+                        </div>
+                        <span class="font-bold text-2xl text-white tracking-tight">Insight<span
+                                class="text-brand-500">Care</span></span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm mb-6 leading-relaxed">Smarter healthcare through artificial
+                        intelligence, preventive care, and intuitive digital tools.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors hover:scale-110"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors hover:scale-110"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-colors hover:scale-110"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="hover:text-brand-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-brand-400 transition-colors">Services</a></li>
+                        <li><a href="#premium" class="hover:text-brand-400 transition-colors">Premium</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg">Contact & Legal</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-brand-500"></i>
+                            hello@insightcare.com</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-brand-500"></i> +1 (800)
+                            123-4567</li>
+                        <li class="mt-4 pt-4 border-t border-slate-800"><a href="#"
+                                class="hover:text-brand-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-400 transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="text-center pt-8 border-t border-slate-800 text-slate-500 text-sm">
+                &copy; 2026 InsightCare Platform. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
