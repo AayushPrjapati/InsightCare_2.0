@@ -20,7 +20,7 @@ A smart health web app that puts AI-powered tools, a chatbot, music therapy, and
 
 ## 👋 What is InsightCare?
 
-InsightCare is a health platform that runs entirely in your browser. No sign-up, no complicated setup. Just open `index.html` and everything works.
+InsightCare is a health platform that runs entirely in your browser. No sign-up, no complicated setup. Just open and everything works.
 
 It's got a bunch of health tools built in — track your vitals, chat with an AI health buddy, check your cancer risk, get music recommendations based on your mood, and even join a video consultation. All in one page.
 
