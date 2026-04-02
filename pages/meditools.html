@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightCare | MediTools</title>
+    
+    <!-- Scripts & Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <style>
+        .animate-fade-in-up {
+            animation: fadeInUp 0.4s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden pt-[80px]">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled border-b border-slate-200" id="navbar">
+        <div class="nav-container !py-3">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> InsightCare
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About Us</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <a href="../index.html#cta" class="btn btn-primary nav-cta hover-glow !py-2 !px-5 text-sm">Dashboard</a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="bg-slate-900 text-white py-16 relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Health Indicators <span class="text-brand-400">Tracker</span></h1>
+            <p class="text-slate-300 text-lg max-w-2xl mx-auto">Instant validation of your vital biometrics against internationally recognized healthy ranges.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="py-12 max-w-5xl mx-auto px-4 relative">
+        
+        <div class="bg-white rounded-[2.5rem] p-6 md:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col md:flex-row gap-8 min-h-[500px]">
+            
+            <!-- Sidebar Navigation (Tabs) -->
+            <div class="md:w-1/3 flex flex-col gap-3 pr-0 md:pr-6 md:border-r border-slate-100">
+                <button onclick="switchTab('bmi')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 active-tab bg-brand-500 text-white shadow-md">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-white/20"><i class="fa-solid fa-weight-scale"></i></div> BMI
+                </button>
+                <button onclick="switchTab('bloodPressure')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 bg-white text-slate-600 hover:bg-slate-50">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 text-slate-400"><i class="fa-solid fa-droplet"></i></div> Blood Pressure
+                </button>
+                <button onclick="switchTab('cholesterol')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 bg-white text-slate-600 hover:bg-slate-50">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 text-slate-400"><i class="fa-solid fa-vial"></i></div> Cholesterol
+                </button>
+                <button onclick="switchTab('bloodSugar')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 bg-white text-slate-600 hover:bg-slate-50">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 text-slate-400"><i class="fa-solid fa-cubes-stacked"></i></div> Blood Sugar
+                </button>
+                <button onclick="switchTab('waistHip')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 bg-white text-slate-600 hover:bg-slate-50">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 text-slate-400"><i class="fa-solid fa-child"></i></div> Waist-to-Hip Ratio
+                </button>
+                <button onclick="switchTab('restingHeartRate')" class="indicator-tab text-left px-5 py-4 rounded-2xl font-semibold transition-all flex items-center gap-3 bg-white text-slate-600 hover:bg-slate-50">
+                    <div class="w-8 h-8 rounded-full flex items-center justify-center bg-slate-100 text-slate-400"><i class="fa-solid fa-heart-pulse"></i></div> Resting Heart Rate
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="md:w-2/3 relative flex flex-col pt-4">
+                
+                <!-- View: BMI -->
+                <div id="bmi" class="indicator-view block">
+                    <div class="content-anim">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Body Mass Index</h2>
+                            <p class="text-slate-500">Measure of body fat based on height and weight that applies to adult men and women.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter your BMI Value</label>
+                                <input type="number" step="0.1" id="bmi-value" placeholder="e.g. 22.5" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference range:</strong> 18.5 – 24.9</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('bmi')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('bmi')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View: Blood Pressure -->
+                <div id="bloodPressure" class="indicator-view hidden">
+                    <div class="content-anim animate-fade-in-up">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Blood Pressure</h2>
+                            <p class="text-slate-500">The pressure of circulating blood against the walls of blood vessels.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter Systolic / Diastolic input</label>
+                                <input type="text" id="bloodPressure-value" placeholder="e.g. 120/80" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference target:</strong> Below 120/80 mmHg</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('bloodPressure')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('bloodPressure')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View: Cholesterol -->
+                <div id="cholesterol" class="indicator-view hidden">
+                    <div class="content-anim animate-fade-in-up">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Total Cholesterol</h2>
+                            <p class="text-slate-500">Measure of total amount of cholesterol in your blood, including LDL and HDL.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter Total Cholesterol Level (mg/dL)</label>
+                                <input type="number" id="cholesterol-value" placeholder="e.g. 185" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference target:</strong> Less than 200 mg/dL</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('cholesterol')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('cholesterol')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View: Blood Sugar -->
+                <div id="bloodSugar" class="indicator-view hidden">
+                    <div class="content-anim animate-fade-in-up">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Blood Sugar Level</h2>
+                            <p class="text-slate-500">Measure of glucose in the blood, an important screening for diabetes risk.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter Fasting Blood Sugar Level (mg/dL)</label>
+                                <input type="number" id="bloodSugar-value" placeholder="e.g. 95" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference target:</strong> 70 – 130 mg/dL (before meals/fasting)</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('bloodSugar')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('bloodSugar')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View: Waist Hip Ratio -->
+                <div id="waistHip" class="indicator-view hidden">
+                    <div class="content-anim animate-fade-in-up">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Waist-to-Hip Ratio</h2>
+                            <p class="text-slate-500">Calculated by dividing waist circumference by hip circumference to assess weight distribution.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter your WHR</label>
+                                <input type="number" step="0.01" id="waistHip-value" placeholder="e.g. 0.82" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference target:</strong> &lt; 0.85 (female), &lt; 0.90 (male)</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('waistHip')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('waistHip')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View: Resting Heart Rate -->
+                <div id="restingHeartRate" class="indicator-view hidden">
+                    <div class="content-anim animate-fade-in-up">
+                        <div class="mb-8">
+                            <h2 class="text-3xl font-bold text-slate-900 mb-2">Resting Heart Rate</h2>
+                            <p class="text-slate-500">Number of times your heart beats per minute while at complete rest.</p>
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Enter Heart Rate (bpm)</label>
+                                <input type="number" id="restingHeartRate-value" placeholder="e.g. 72" class="w-full text-lg bg-slate-50 border border-slate-200 text-slate-800 rounded-xl px-4 py-4 outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all">
+                            </div>
+                            
+                            <div class="bg-blue-50 border border-blue-100 rounded-xl p-4 flex gap-3 text-sm text-blue-700">
+                                <i class="fa-solid fa-circle-info mt-0.5"></i>
+                                <span><strong>Normal reference range:</strong> 60 – 100 bpm</span>
+                            </div>
+
+                            <div class="flex gap-4">
+                                <button onclick="checkHealth('restingHeartRate')" class="flex-1 py-4 bg-slate-900 text-white rounded-xl font-bold hover:bg-brand-600 transition-all shadow-md">Analyze Value</button>
+                                <button onclick="addToDailyReport('restingHeartRate')" class="flex-none px-6 py-4 bg-white border border-slate-200 text-slate-700 rounded-xl font-bold hover:bg-slate-50 transition-all" title="Log to Dashboard"><i class="fa-regular fa-bookmark"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Result Notification Box -->
+                <div id="global-result" class="hidden mt-6 p-5 rounded-2xl border transition-all text-sm">
+                   <!-- Content injected by JS -->
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Script Dependencies -->
+    <script src="../script.js"></script>
+    <script src="meditools.js"></script>
+</body>
+</html>

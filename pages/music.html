@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightCare | Music Recommendation Engine</title>
+    
+    <!-- Scripts & Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white pt-[80px] min-h-screen flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="navbar scrolled border-b border-slate-200" id="navbar">
+        <div class="nav-container !py-3">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-heart-pulse"></i> InsightCare
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About Us</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <a href="../index.html#cta" class="btn btn-primary nav-cta hover-glow !py-2 !px-5 text-sm">Main Dashboard</a>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 relative overflow-hidden flex items-center justify-center">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-100 rounded-full blur-[100px] opacity-50 -translate-y-1/2 translate-x-1/3 -z-10"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-100 rounded-full blur-[100px] opacity-50 translate-y-1/3 -translate-x-1/3 -z-10"></div>
+        
+        <div class="container max-w-4xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-100 text-amber-500 text-3xl mb-4 shadow-sm">
+                    <i class="fa-solid fa-music"></i>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">Therapeutic Music Engine</h1>
+                <p class="text-lg text-slate-600 max-w-2xl mx-auto">Discover AI-curated soundscapes designed specifically to improve your mood, reduce stress, and support emotional healing.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                <!-- Form Area -->
+                <div class="md:col-span-12 lg:col-span-5 glass-card bg-white/80 p-6 md:p-8 rounded-3xl shadow-xl shadow-slate-200/50 border border-white h-fit">
+                    <h2 class="text-xl font-semibold mb-6 flex items-center gap-2"><i class="fa-solid fa-sliders text-brand-500"></i> Adjust Parameters</h2>
+                    
+                    <div class="space-y-5">
+                        <div class="form-group flex flex-col gap-2">
+                            <label for="disease" class="text-sm font-medium text-slate-700">How are you feeling?</label>
+                            <div class="relative">
+                                <select id="disease" class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-700 rounded-xl px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all font-medium">
+                                    <option value="stress">Experiencing Stress</option>
+                                    <option value="anxiety">Feeling Anxious</option>
+                                    <option value="depression">Low Mood / Depression</option>
+                                    <option value="insomnia">Can't Sleep (Insomnia)</option>
+                                    <option value="bipolar">Mood Swings</option>
+                                    <option value="fatigue">Fatigued / Exhausted</option>
+                                    <option value="chronic-pain">Managing Chronic Pain</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-4 md:pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group flex flex-col gap-2">
+                            <label for="age" class="text-sm font-medium text-slate-700">Age Group</label>
+                            <div class="relative">
+                                <select id="age" class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-700 rounded-xl px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all font-medium">
+                                    <option value="child">Child (0-12)</option>
+                                    <option value="teen">Teen (13-19)</option>
+                                    <option value="adult" selected>Adult (20-64)</option>
+                                    <option value="senior">Senior (65+)</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-4 md:pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group flex flex-col gap-2">
+                            <label for="sex" class="text-sm font-medium text-slate-700">Identity / Preference</label>
+                            <div class="relative">
+                                <select id="sex" class="w-full appearance-none bg-slate-50 border border-slate-200 text-slate-700 rounded-xl px-4 py-3 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 transition-all font-medium">
+                                    <option value="male">Male Profile</option>
+                                    <option value="female">Female Profile</option>
+                                    <option value="non-binary">Gender Neutral / Non-binary</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-4 md:pointer-events-none text-slate-400">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="recommendMusic()" class="w-full py-4 mt-4 bg-gradient-to-r from-brand-500 to-brand-600 text-white rounded-xl font-semibold shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Playlist
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Area -->
+                <div class="md:col-span-12 lg:col-span-7">
+                    <div id="recommendations" class="bg-white rounded-3xl shadow-lg border border-slate-100 p-6 md:p-8 h-full transition-all duration-500 opacity-0 translate-y-4">
+                        <!-- Initial Placeholder -->
+                        <div class="flex flex-col items-center justify-center h-full text-center py-12 text-slate-400">
+                            <div class="w-20 h-20 rounded-full bg-slate-50 flex items-center justify-center mb-4 text-3xl">
+                                <i class="fa-solid fa-compact-disc"></i>
+                            </div>
+                            <h3 class="text-lg font-medium text-slate-600 mb-2">Awaiting Parameters</h3>
+                            <p class="text-sm max-w-xs mx-auto">Fill out the parameters and generate your therapeutic music playlist.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Script Dependencies -->
+    <script src="../script.js"></script>
+    <!-- Page Specific Script -->
+    <script src="music.js"></script>
+</body>
+</html>
