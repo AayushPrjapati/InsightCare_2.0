@@ -8,7 +8,7 @@ A smart health web app that puts AI-powered tools, a chatbot, music therapy, and
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🌐_Try_It_Now-10b981?style=for-the-badge)](https://aayushprjapati.github.io/InsightCare_2.0/)
+[![Live Demo](https://img.shields.io/badge/🌐_Try_It_Now-10b981?style=for-the-badge)](https://insightcare.netlify.app/)
 [![Status](https://img.shields.io/badge/Status-Active-10b981?style=for-the-badge)]()
 [![Built With](https://img.shields.io/badge/HTML%20·%20Tailwind%20·%20Vanilla_JS-f59e0b?style=for-the-badge)]()
 
