@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-// Predefined responses for common questions
-const responses = {
-    "hello": "Hello! I'm Fitzy, your personal health AI. How can I assist you today?",
-    "hi": "Hi there! How can I help you?",
-    "how are you": "I'm always running optimally, thanks for asking! Need any health advice?",
-    "what is your name": "I'm Fitzy, your AI healthcare assistant from InsightCare.",
-    "tell me a joke": "Why did the scarecrow win an award? Because he was outstanding in his field... but remember to get some sun for Vitamin D!",
-    "headache": "I'm sorry you're dealing with a headache. Make sure you're hydrated and rested. If it persists, consider a Quick Consultation.",
-    "diet": "A balanced diet rich in leafy greens, lean protein, and complex carbs is great! Consider logging your meals in the MediTools section.",
-    "bye": "Goodbye! Stay healthy and have a great day!",
-    "default": "I'm still learning and might not understand that. Rephrase, or try saying 'hello' or asking about 'diet'."
-};
-
-=======
 // Predefined buddy responses for common chats
 const responses = {
     "hello": "Hey there! 👋 What's up?",
@@ -63,21 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollToBottom();
 });
 
->>>>>>> 4d2fe5e (Enhanced Features)
 function handleKeyPress(event) {
     if (event.key === "Enter") {
         sendMessage();
     }
 }
 
-<<<<<<< HEAD
-// Function to send a message
-function sendMessage() {
-    const userInputElement = document.getElementById("user-input");
-    const userInput = userInputElement.value;
-    if (userInput.trim() === "") return;
-
-=======
 // Shows floating quick reply buttons
 function showQuickReplies() {
     const container = document.getElementById("quick-replies");
@@ -110,64 +86,31 @@ function sendMessage() {
     // Clear quick replies once user starts talking
     clearQuickReplies();
 
->>>>>>> 4d2fe5e (Enhanced Features)
     // Add user message to chatbox
     addMessage(userInput, "user");
 
     // Clear input field
     userInputElement.value = "";
-<<<<<<< HEAD
-=======
     document.getElementById("user-input").focus();
->>>>>>> 4d2fe5e (Enhanced Features)
 
     // Show typing indicator
     showTypingIndicator();
 
-<<<<<<< HEAD
-=======
     // Calculate dynamic response time to feel natural (1 - 2.5s)
     const delay = 1000 + (Math.random() * 1500);
 
->>>>>>> 4d2fe5e (Enhanced Features)
     // Get bot response
     setTimeout(() => {
         removeTypingIndicator();
         const botResponse = getResponse(userInput);
         addMessage(botResponse, "bot");
-<<<<<<< HEAD
-    }, 1000 + Math.random() * 500); // Random delay to feel human
-}
-
-// Function to add a message to the chatbox
-=======
     }, delay);
 }
 
->>>>>>> 4d2fe5e (Enhanced Features)
 function addMessage(text, sender) {
     const chatbox = document.getElementById("chatbox");
     const messageWrapper = document.createElement("div");
     
-<<<<<<< HEAD
-    if(sender === "user") {
-        messageWrapper.className = "flex justify-end animate-fade-in-up mb-4";
-        messageWrapper.innerHTML = `
-            <div class="bg-brand-500 text-white p-4 rounded-2xl rounded-tr-sm shadow-sm max-w-[80%] inline-block text-sm">
-                ${text}
-            </div>
-        `;
-    } else {
-        messageWrapper.className = "flex justify-start animate-fade-in-up mb-4";
-        messageWrapper.innerHTML = `
-            <div class="flex items-end gap-2 max-w-[80%]">
-                <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 text-sm">
-                    <i class="fa-solid fa-robot"></i>
-                </div>
-                <div class="bg-white border border-slate-100 text-slate-700 p-4 rounded-2xl rounded-tl-sm shadow-sm text-sm">
-                    ${text}
-                </div>
-=======
     // Format timestamp
     const now = new Date();
     const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
@@ -193,40 +136,18 @@ function addMessage(text, sender) {
                     ${text}
                 </div>
                 <span class="text-[11px] text-slate-400 mt-1 font-medium ml-1">${timeString}</span>
->>>>>>> 4d2fe5e (Enhanced Features)
             </div>
         `;
     }
     
     chatbox.appendChild(messageWrapper);
-<<<<<<< HEAD
-    chatbox.scrollTop = chatbox.scrollHeight;  // Auto-scroll
-=======
     scrollToBottom();
->>>>>>> 4d2fe5e (Enhanced Features)
 }
 
 function showTypingIndicator() {
     const chatbox = document.getElementById("chatbox");
     const indicator = document.createElement("div");
     indicator.id = "typing-indicator";
-<<<<<<< HEAD
-    indicator.className = "flex justify-start animate-fade-in-up mb-4";
-    indicator.innerHTML = `
-        <div class="flex items-end gap-2 max-w-[80%]">
-            <div class="w-8 h-8 rounded-full bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 text-sm">
-                <i class="fa-solid fa-robot"></i>
-            </div>
-            <div class="bg-white border border-slate-100 text-slate-700 p-4 rounded-2xl rounded-tl-sm shadow-sm text-sm flex gap-1 items-center h-12">
-                <span class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-duration: 0.6s"></span>
-                <span class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 0.2s; animation-duration: 0.6s"></span>
-                <span class="w-2 h-2 bg-slate-300 rounded-full animate-bounce" style="animation-delay: 0.4s; animation-duration: 0.6s"></span>
-            </div>
-        </div>
-    `;
-    chatbox.appendChild(indicator);
-    chatbox.scrollTop = chatbox.scrollHeight;
-=======
     indicator.className = "flex items-end gap-3 max-w-[85%] sm:max-w-[75%] animate-pop-in mb-1 mt-2 w-full";
     indicator.innerHTML = `
         <div class="w-8 h-8 rounded-full flex-shrink-0 bg-white shadow-sm overflow-hidden p-1 self-end mb-1">
@@ -240,22 +161,11 @@ function showTypingIndicator() {
     `;
     chatbox.appendChild(indicator);
     scrollToBottom();
->>>>>>> 4d2fe5e (Enhanced Features)
 }
 
 function removeTypingIndicator() {
     const indicator = document.getElementById("typing-indicator");
     if(indicator) {
-<<<<<<< HEAD
-        indicator.remove();
-    }
-}
-
-// Function to retrieve bot response
-function getResponse(input) {
-    input = input.toLowerCase().trim();
-    // basic matching
-=======
         indicator.style.opacity = '0';
         indicator.style.transform = 'translateY(10px)';
         indicator.style.transition = 'all 0.2s ease-out';
@@ -267,7 +177,6 @@ function getResponse(input) {
     // Strip emojis for matching
     input = input.replace(/[\u{1F600}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu, '').trim().toLowerCase();
     
->>>>>>> 4d2fe5e (Enhanced Features)
     for(const key in responses) {
         if(input.includes(key) && key !== "default") {
             return responses[key];
@@ -275,8 +184,6 @@ function getResponse(input) {
     }
     return responses["default"];
 }
-<<<<<<< HEAD
-=======
 
 function scrollToBottom() {
     const chatbox = document.getElementById("chatbox");
@@ -285,4 +192,3 @@ function scrollToBottom() {
         behavior: 'smooth'
     });
 }
->>>>>>> 4d2fe5e (Enhanced Features)
